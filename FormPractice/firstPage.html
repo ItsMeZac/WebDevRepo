@@ -1,0 +1,78 @@
+<!-- This is an exercise I used to learn to create HTML forms and also to style HTML with CSS-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Barriecito|Staatliches&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2>Chrono Trigger Survey Form</h2>
+    <form action="/my-form-submitting-page" method="post">
+        <fieldset>
+            <label for="name">Name: </label>
+            <input id="name" type="text" placeholder="John Smith" required>
+            <label for="email">Email: </label>
+            <input id="email" type="email" placeholder="johnsmith@mail.com" required>
+            <label for="age">Age: </label>
+            <input id="age" type="text" placeholder="20" required>
+        </fieldset>
+        
+        <p>How many hours have you played Chrono Trigger?: </p>
+        <fieldset id="hours">            
+            <select>
+                <option>0-10</option>
+                <option>11-50</option>
+                <option>50-100</option>
+                <option>101+</option>
+            </select>
+        </fieldset>
+        
+        <p>Would you recommend Chrono Trigger to a friend?: </p>
+        <fieldset id="recommendation">            
+            <label for="yes">Yes</label>
+            <input name="recommend" id="yes" type="radio" value="YES">
+            <label for="ofcourse">Of Course</label>
+            <input name="recommend" id="ofcourse" type="radio" value="OFCOURSE">
+            <label for="daily">I Recommend It Daily</label>
+            <input name="recommend" id="daily" type="radio" value="DAILY">
+        </fieldset>
+
+        <p>What do you like most about Chrono Trigger?: </p>
+        <fieldset id="like">
+            <select>
+                <option>Story</option>
+                <option>Music</option>
+                <option>Gameplay</option>
+                <option>Art</option>
+            </select>
+        </fieldset>
+
+        <p>What improvements could be made to Chrono Trigger?: </p>
+        <fieldset id="improve">
+            <label for="appreciation">My Appreciation For Chrono Trigger</label>
+            <input id="appreciation" type="checkbox">
+            <label for="respect">My Lack Of Respect For True Art</label>
+            <input id="respect" type="checkbox">
+            <label for="course">Make It Required Course Work In Grade School</label>
+            <input id="course" type="checkbox">
+            <label for="completion">Make Completion Of Chrono Trigger Required For Any Employment</label>
+            <input id="completion" type="checkbox">
+            <label for="nothing">Nothing</label>
+            <input id="nothing" type="checkbox">
+            <label for="rolltide">Roll Tide</label>
+            <input id="rolltide" type="checkbox">
+        </fieldset>
+        
+        <p>Please include any additional thoughts or comments you might have:</p>
+        
+             <textarea name="comments" placeholder="Nothing written here will be read by anyone ever" rows="10" columns="50"></textarea>
+        
+
+        <input type="submit">
+    </form>
+</body>
+</html>
